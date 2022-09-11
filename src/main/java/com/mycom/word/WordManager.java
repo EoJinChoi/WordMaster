@@ -45,13 +45,16 @@ public class WordManager
             }
             if(menu == 4)// 단어 추가
             {
-                wordCRUD.addWord();
+                wordCRUD.addItem();
             }
             if(menu == 5)// 단어 수정
             {
                 wordCRUD.updateItem();
             }
-
+            if(menu == 6)// 단어 삭제
+            {
+                wordCRUD.deleteItem();
+            }
         }
     }
 }
