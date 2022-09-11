@@ -31,6 +31,7 @@ public class WordManager
 
     public void start()
     {
+        wordCRUD.loadFile();
         while(true)
         {
             int menu = selectMenu();
@@ -43,6 +44,14 @@ public class WordManager
             {
                 wordCRUD.listAll();
             }
+            if(menu == 2)// 수준별 단어 보기
+            {
+                wordCRUD.searchLevel();
+            }
+            if(menu == 3)// 수준별 단어 보기
+            {
+                wordCRUD.searchWord();
+            }
             if(menu == 4)// 단어 추가
             {
                 wordCRUD.addItem();
@@ -54,6 +63,10 @@ public class WordManager
             if(menu == 6)// 단어 삭제
             {
                 wordCRUD.deleteItem();
+            }
+            if(menu == 7)// 파일 저장
+            {
+                wordCRUD.saveFile();
             }
         }
     }
