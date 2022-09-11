@@ -34,19 +34,24 @@ public class WordManager
         while(true)
         {
             int menu = selectMenu();
-            if(menu == 0)
+            if(menu == 0)// 나가기
             {
                 System.out.println("프로그램 종료");
                 break;
             }
-            if(menu == 1)
+            if(menu == 1)// 모든 단어 보기
             {
                 wordCRUD.listAll();
             }
-            if(menu == 4)
+            if(menu == 4)// 단어 추가
             {
                 wordCRUD.addWord();
             }
+            if(menu == 5)// 단어 수정
+            {
+                wordCRUD.updateItem();
+            }
+
         }
     }
 }
